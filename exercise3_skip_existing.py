@@ -18,7 +18,7 @@ for file in os.listdir(folder_name):
     path = os.path.join(folder_name, file)
     if os.path.isfile(path):
         if file in existing_files:
-            print(f"⚠️ File already exists: {file}")
+            print(f"⚠️S File already exists: {file}")
         else:
             s3.upload_file(path, bucket_name, file)
             print(f"✅ Uploaded: {file}")
